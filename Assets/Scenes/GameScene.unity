@@ -9339,6 +9339,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1824340380413090, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
   m_PrefabInstance: {fileID: 1968216864}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &783631979 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4549428611729446, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
+  m_PrefabInstance: {fileID: 1968216864}
+  m_PrefabAsset: {fileID: 0}
 --- !u!82 &783631980
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19875,9 +19880,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1629643219}
   - component: {fileID: 1629643218}
-  - component: {fileID: 1629643217}
   - component: {fileID: 1629643216}
   - component: {fileID: 1629643215}
+  - component: {fileID: 1629643217}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -19910,9 +19915,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1629643214}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07fa4a0fad4cb5e42832761c0c407a1e, type: 3}
+  m_Script: {fileID: 11500000, guid: fd66faadc2abccf499595f9b3bbc6478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 783631979}
+  smoothSpeed: 0.125
 --- !u!20 &1629643218
 Camera:
   m_ObjectHideFlags: 0

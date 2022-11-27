@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CountAndOpenTheDoor : MonoBehaviour
 {
-    private int items = 1;
+    private int items;
 
     private int collected = 0;
 
@@ -20,6 +20,7 @@ public class CountAndOpenTheDoor : MonoBehaviour
     void Awake()
     {
         items = GameObject.FindGameObjectsWithTag(tagging).Length;
+        Debug.Log(items);
         /* leftDoor = GameObject.Find("moving door").transform;
         rightDoor = GameObject.Find("RightOpen").transform; */
     }
@@ -32,10 +33,16 @@ public class CountAndOpenTheDoor : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        // Debug.Log(other.gameObject.name);
         if (other.gameObject.tag == tagging)
         {
             // kudune mbuka modal sek se
             CountUpAndOpen(other);
+        }
+
+        if (other.gameObject.name == "FinishLine" && isTheDoorOpened)
+        {
+            Debug.Log("Finished ges!");
         }
     }
 
