@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CountAndOpenTheDoor : MonoBehaviour
 {
@@ -43,6 +44,7 @@ public class CountAndOpenTheDoor : MonoBehaviour
         if (other.gameObject.name == "FinishLine" && isTheDoorOpened)
         {
             Debug.Log("Finished ges!");
+            ChangeScene();
         }
     }
 
@@ -56,6 +58,26 @@ public class CountAndOpenTheDoor : MonoBehaviour
         {
             OpenTheDoor();
         }
+    }
+
+    void ChangeScene()
+    {
+        string nextScene = "";
+
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "Level1":
+                nextScene = "Level2";
+                break;
+            case "Level2":
+                nextScene = "Level3";
+                break;
+            default:
+                nextScene = "Mainmenu";
+                break;
+        }
+
+        SceneManager.LoadScene(nextScene);
     }
 
     // Update is called once per frame
