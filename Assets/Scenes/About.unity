@@ -496,7 +496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.5294118, g: 0.69803923, b: 0.67058825, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -504,7 +504,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 23c601c035dd35b40bafda29035680bc, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -519,11 +519,12 @@ MonoBehaviour:
   m_Text: 'Tentang Game :
 
 
-    asdasdasd
-
-    asdasdsad
-
-    asdsadasdsad'
+    Andy adalah seorang pelajar yang memiliki keinginan
+    kuat untuk belajar dunia IT dan Programming. Suatu saat, ia tertidur saat pelajaran
+    pengenalan Hardware komputer. Ketika terbangun, ia menyadari bahwa hanya tinggal
+    ia sendiri yang masih ada di sekolah itu. Andy kemudian menjelajah semua sudut
+    sekolah dan menemukan petunjuk yang menyatakan bahwa ia bisa keluar jika ia berhasil
+    mendapatkan item-item yang diperintahkan.'
 --- !u!222 &991344428
 CanvasRenderer:
   m_ObjectHideFlags: 0
