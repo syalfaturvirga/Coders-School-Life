@@ -6,15 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Oculus/VR/Scenes/ControllerModels.unity
+    guid: 39cfe7aa0a2d46c47994d8d0308ec663
+  - enabled: 0
     path: Assets/Scenes/MainMenu.unity
     guid: ecbfc264c1a404d4d90a69e19b446f75
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameScene.unity
     guid: c206d02e77fbc3148a269062ea0e8069
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/About.unity
     guid: c8c481b61d2656d4da81dc958a9a8a2e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Credit.unity
     guid: 03e4d10e83adb5c43856d8a7eac0c6a6
   - enabled: 1
@@ -26,4 +29,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level3.unity
     guid: 994dd0f0d0957ee479745ab0e058a043
-  m_configObjects: {}
+  - enabled: 0
+    path: Assets/Scenes/Level1.unity
+    guid: 8a56dc193a38ae24795eea10659a32fc
+  - enabled: 0
+    path: Assets/Scenes/Level2.unity
+    guid: d3b4395699ad25248ac286b79f3776b4
+  - enabled: 0
+    path: Assets/Scenes/Level3.unity
+    guid: 994dd0f0d0957ee479745ab0e058a043
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: da58a3068c9ea8244af03d63dd43f1ad, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a0085da70f1c65c48be71045a599212e, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: c37e6deb03fc2484f8f1688efd0b562a, type: 2}
