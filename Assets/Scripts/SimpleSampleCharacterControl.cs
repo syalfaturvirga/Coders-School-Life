@@ -15,6 +15,8 @@ public class SimpleSampleCharacterControl : MonoBehaviour
         Direct
     }
 
+    public AudioSource suaraCoin;
+
     [SerializeField] private float m_moveSpeed = 2;
     [SerializeField] private float m_turnSpeed = 200;
     [SerializeField] private float m_jumpForce = 4;
@@ -61,6 +63,13 @@ public class SimpleSampleCharacterControl : MonoBehaviour
                     m_collisions.Add(collision.collider);
                 }
                 m_isGrounded = true;
+            }
+
+            //Coin
+            if(collision.gameObject.CompareTag("Collected"))
+            {
+                //play suara coin
+                suaraCoin.Play();
             }
         }
     }
