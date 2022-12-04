@@ -32,7 +32,9 @@ public class CountAndOpenTheDoor : MonoBehaviour
 
     void setText()
     {
-        text.text = collected + "/" + items;
+        if (text) {
+            text.text = collected + "/" + items;
+        }
     }
 
     // Start is called before the first frame update
