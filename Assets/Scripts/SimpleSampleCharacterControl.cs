@@ -64,13 +64,13 @@ public class SimpleSampleCharacterControl : MonoBehaviour
                 }
                 m_isGrounded = true;
             }
+        }
 
-            //Coin
-            if(collision.gameObject.CompareTag("Collected"))
-            {
-                //play suara coin
-                suaraCoin.Play();
-            }
+        //Coin
+        if(collision.gameObject.CompareTag("Collected"))
+        {
+            //play suara coin
+            suaraCoin.Play();
         }
     }
 
