@@ -72,6 +72,13 @@ public class SimpleSampleCharacterControl : MonoBehaviour
                 suaraCoin.Play();
             }
         }
+
+        //Coin
+        if(collision.gameObject.CompareTag("Collected"))
+        {
+            //play suara coin
+            suaraCoin.Play();
+        }
     }
 
     private void OnCollisionStay(Collision collision)
