@@ -88,7 +88,7 @@ public class CountAndOpenTheDoor : MonoBehaviour
                 nextScene = "Level3";
                 break;
             default:
-                nextScene = "Credit";
+                nextScene = "Mainmenu";
                 break;
         }
 
