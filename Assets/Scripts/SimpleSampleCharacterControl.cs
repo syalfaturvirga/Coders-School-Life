@@ -15,6 +15,8 @@ public class SimpleSampleCharacterControl : MonoBehaviour
         Direct
     }
 
+    public AudioSource suaraCoin;
+
     [SerializeField] private float m_moveSpeed = 2;
     [SerializeField] private float m_turnSpeed = 200;
     [SerializeField] private float m_jumpForce = 4;
@@ -61,6 +63,13 @@ public class SimpleSampleCharacterControl : MonoBehaviour
                     m_collisions.Add(collision.collider);
                 }
                 m_isGrounded = true;
+            }
+
+            //Coin
+            if(collision.gameObject.CompareTag("Collected"))
+            {
+                //play suara coin
+                suaraCoin.Play();
             }
         }
     }
@@ -132,7 +141,7 @@ public class SimpleSampleCharacterControl : MonoBehaviour
         }
 
         m_wasGrounded = m_isGrounded;
-        m_jumpInput = false;
+        // m_jumpInput = false;
     }
 
     private void TankUpdate()
@@ -201,11 +210,16 @@ public class SimpleSampleCharacterControl : MonoBehaviour
     private void JumpingAndLanding()
     {
         bool jumpCooldownOver = (Time.time - m_jumpTimeStamp) >= m_minJumpInterval;
+        Debug.Log(jumpCooldownOver);
+        // Debug.Log(m_jumpInput);
+        // Debug.Log(m_isGrounded);
 
         if (jumpCooldownOver && m_isGrounded && m_jumpInput)
         {
             m_jumpTimeStamp = Time.time;
             m_rigidBody.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
+
+            m_jumpInput = false;
         }
 
         if (!m_wasGrounded && m_isGrounded)

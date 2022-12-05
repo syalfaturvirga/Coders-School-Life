@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CountAndOpenTheDoor : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class CountAndOpenTheDoor : MonoBehaviour
     private bool isTheDoorOpened = false;
 
     private string tagging = "Collected";
+
+    public Text text;
+
+    public AudioSource suaraCoin;
     /* private float smoothSpeed = 0.125f;
     private Transform leftDoor;
     private Transform rightDoor;
@@ -22,8 +27,16 @@ public class CountAndOpenTheDoor : MonoBehaviour
     {
         items = GameObject.FindGameObjectsWithTag(tagging).Length;
         Debug.Log(items);
+        setText();
         /* leftDoor = GameObject.Find("moving door").transform;
         rightDoor = GameObject.Find("RightOpen").transform; */
+    }
+
+    void setText()
+    {
+        if (text) {
+            text.text = collected + "/" + items;
+        }
     }
 
     // Start is called before the first frame update
@@ -34,11 +47,11 @@ public class CountAndOpenTheDoor : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        // Debug.Log(other.gameObject.name);
+        Debug.Log(other.gameObject.tag);
         if (other.gameObject.tag == tagging)
         {
-            // kudune mbuka modal sek se
             CountUpAndOpen(other);
+            suaraCoin.Play();
         }
 
         if (other.gameObject.name == "FinishLine" && isTheDoorOpened)
@@ -53,6 +66,8 @@ public class CountAndOpenTheDoor : MonoBehaviour
         Destroy(collided.gameObject);
         
         collected++;
+
+        setText();
 
         if (collected == items && ! isTheDoorOpened)
         {
