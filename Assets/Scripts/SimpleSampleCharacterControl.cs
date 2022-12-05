@@ -115,7 +115,7 @@ public class SimpleSampleCharacterControl : MonoBehaviour
 
     private void Update()
     {
-        if (!m_jumpInput && Input.GetKey(KeyCode.Space))
+        if (!m_jumpInput && (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Joystick1Button2)))
         {
             m_jumpInput = true;
         }
