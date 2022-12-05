@@ -45,10 +45,9 @@ public class CountAndOpenTheDoor : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log(other);
+        Debug.Log(other.gameObject.tag);
         if (other.gameObject.tag == tagging)
         {
-            // kudune mbuka modal sek se
             CountUpAndOpen(other);
         }
 
