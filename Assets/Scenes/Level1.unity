@@ -24786,6 +24786,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 783631984, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 1877698043}
+    - target: {fileID: 783631984, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
       propertyPath: suaraCoin
       value: 
       objectReference: {fileID: 1085152086}
