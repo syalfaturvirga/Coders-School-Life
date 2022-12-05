@@ -24333,6 +24333,10 @@ PrefabInstance:
       propertyPath: text
       value: 
       objectReference: {fileID: 1665055854}
+    - target: {fileID: 783631984, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
+      propertyPath: suaraCoin
+      value: 
+      objectReference: {fileID: 1490169841}
     - target: {fileID: 1824340380413090, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
       propertyPath: m_Name
       value: MaleFreeSimpleMovement1

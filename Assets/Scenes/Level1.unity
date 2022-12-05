@@ -6887,11 +6887,11 @@ Transform:
   m_LocalPosition: {x: 7.9520874, y: 1.1107273, z: -11.303034}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1972776855}
+  - {fileID: 361253095}
   - {fileID: 7260738733543024016}
   - {fileID: 1091857361}
   - {fileID: 159786040}
-  - {fileID: 1972776855}
-  - {fileID: 361253095}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9509,19 +9509,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip:
   - {fileID: 8300000, guid: 853753aaae22756429a8c8e6f259fdc0, type: 3}
---- !u!114 &783631984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 783631974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eec0b2e88844ae6418f9ac34113bafcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 1877698043}
 --- !u!1001 &785309161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23548,17 +23535,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4558593196022300, guid: 991e8973513e2ad408232c1afeb3a9df, type: 3}
   m_PrefabInstance: {fileID: 1876903414}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1877698043 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1254887255824808527, guid: 83a3340f198053241a41534f96bed36a, type: 3}
-  m_PrefabInstance: {fileID: 1254887254060523444}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1879644750
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24252,6 +24228,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 783631984, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
+      propertyPath: suaraCoin
+      value: 
+      objectReference: {fileID: 1085152086}
     - target: {fileID: 1824340380413090, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
       propertyPath: m_Name
       value: MaleFreeSimpleMovement1

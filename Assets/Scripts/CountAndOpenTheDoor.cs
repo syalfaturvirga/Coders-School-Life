@@ -15,6 +15,8 @@ public class CountAndOpenTheDoor : MonoBehaviour
     private string tagging = "Collected";
 
     public Text text;
+
+    public AudioSource suaraCoin;
     /* private float smoothSpeed = 0.125f;
     private Transform leftDoor;
     private Transform rightDoor;
@@ -49,6 +51,7 @@ public class CountAndOpenTheDoor : MonoBehaviour
         if (other.gameObject.tag == tagging)
         {
             CountUpAndOpen(other);
+            suaraCoin.Play();
         }
 
         if (other.gameObject.name == "FinishLine" && isTheDoorOpened)
